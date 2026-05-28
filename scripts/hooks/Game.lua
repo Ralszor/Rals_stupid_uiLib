@@ -3,8 +3,6 @@ local Game, super = HookSystem.hookScript(Game)
 function Game:encounterPK(encounter, transition, enemy, context)
     if transition == nil then transition = true end
 
-    Assets.playSound("splat")
-
     if self.battle then
         error("Attempt to enter battle while already in battle")
     end
